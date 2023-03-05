@@ -21,4 +21,4 @@ This is a simple Express app that demonstrates how to create a "Hello World" end
 If you'd like to contribute to this project, feel free to submit a pull request. Before submitting a pull request, please ensure that your changes follow the existing code style and that they are thoroughly tested.
 
 ### License
-This project is licensed under the MIT License. See the LICENSE file for more information.# Express Hello World App
+This project is licensed under the MIT License. See the LICENSE file for more information.
