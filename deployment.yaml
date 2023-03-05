@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: express-hello-world
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: express-hello-world
+  template:
+    metadata:
+      labels:
+        app: express-hello-world
+    spec:
+      containers:
+        - name: express-hello-world
+          image: atulram4/hello-express:1.0.0
+          ports:
+            - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: express-hello-world
+spec:
+  selector:
+    app: express-hello-world
+  ports:
+    - name: http
+      port: 80
+      targetPort: 3000
+  type: LoadBalancer # Change as required
